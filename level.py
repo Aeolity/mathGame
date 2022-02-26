@@ -6,8 +6,6 @@ from particles import ParticleEffect
 
 class Level:
 	def __init__(self,level_data,surface):
-		#LvL1background = pygame.image.load('graphics/backgrounds/lvl_1_bg.png') --------work on this later
-		#surface.blit(LvL1background,(0,0))-------- work on this later
 		
 		# level setup
 		self.display_surface = surface 
