@@ -10,7 +10,6 @@ screen = pygame.display.set_mode((screen_width,screen_height))
 clock = pygame.time.Clock()
 level = Level(level_map,screen)
 test_font = pygame.font.Font('font/Pixeltype.ttf', 80)
-DISPLAYSURF = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 LvL1background = pygame.image.load('graphics/backgrounds/2638149.jpg').convert()
 #Lvl1Background_scaled = pygame.transform.scale(LvL1background, (1725, 1024))
 
