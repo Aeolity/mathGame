@@ -129,3 +129,5 @@ class Level:
 		self.vertical_movement_collision()
 		self.create_landing_dust()
 		self.player.draw(self.display_surface)
+	
+

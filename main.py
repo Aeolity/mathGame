@@ -1,5 +1,6 @@
 from cgitb import grey
 import pygame, sys
+from player import Player
 from settings import * 
 from level import Level
 
@@ -12,6 +13,11 @@ level = Level(level_map,screen)
 test_font = pygame.font.Font('font/Pixeltype.ttf', 80)
 LvL1background = pygame.image.load('graphics/backgrounds/2638149.jpg').convert()
 #Lvl1Background_scaled = pygame.transform.scale(LvL1background, (1725, 1024))
+
+#enemy
+snail = pygame.image.load('graphics/snail/snail1.png').convert_alpha()
+snail_rect = snail.get_rect(center = (520,80))
+
 
 #intro screen
 game_name = test_font.render('Mathgame', False, (111,196,169))
@@ -29,9 +35,13 @@ while True:
 		screen.fill((54,38,148))
 		screen.blit(game_name, game_name_rect)
 		screen.blit(intro_directions, intro_directions_rect)
+		keys=pygame.key.get_pressed()
+		if keys[pygame.K_SPACE]:
+			game_active = True
 
 	if game_active:
 		screen.blit(LvL1background,(0,0))
+		screen.blit(snail,snail_rect)
 		level.run()
 	
 	pygame.display.update()
