@@ -6,6 +6,7 @@ from particles import ParticleEffect
 
 
 class Level:
+
     def __init__(self, level_data, surface):
 
         # level setup
