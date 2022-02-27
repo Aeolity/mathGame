@@ -19,9 +19,9 @@ class Player(pygame.sprite.Sprite):
 
 		# player movement
 		self.direction = pygame.math.Vector2(0,0)
-		self.speed = 8
+		self.speed = 6
 		self.gravity = 0.8
-		self.jump_speed = -16
+		self.jump_speed = -12
 
 		# player status
 		self.status = 'idle'
