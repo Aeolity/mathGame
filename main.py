@@ -44,8 +44,8 @@ while True:
 
     if game_active:
         screen.blit(LvL1background, (0, 0))
-        screen.blit(level.snail, level.snail_rect)
         level.run()
+        screen.blit(level.snail, level.snail_rect)
         if level.game_active == False:
             game_active = False
         screen.blit(LvL1foreground, (0, 4))
