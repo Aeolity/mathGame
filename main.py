@@ -5,12 +5,14 @@ from level import Level
 
 # Pygame setup
 pygame.init()
-game_active = False
+global game_active
+game_active = True
 screen = pygame.display.set_mode((screen_width,screen_height))
 clock = pygame.time.Clock()
 level = Level(level_map,screen)
 test_font = pygame.font.Font('font/Pixeltype.ttf', 80)
-LvL1background = pygame.image.load('graphics/backgrounds/2638149.jpg').convert()
+LvL1background = pygame.image.load('graphics/backgrounds/darkbrick.png').convert()
+LvL1foreground = pygame.image.load('graphics/foregrounds/untitled.png').convert_alpha()
 #Lvl1Background_scaled = pygame.transform.scale(LvL1background, (1725, 1024))
 
 #intro screen
@@ -33,6 +35,8 @@ while True:
 	if game_active:
 		screen.blit(LvL1background,(0,0))
 		level.run()
+		screen.blit(LvL1foreground,(0,4))
+		
 	
 	pygame.display.update()
 	clock.tick(60)
