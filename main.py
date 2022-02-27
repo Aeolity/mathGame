@@ -21,11 +21,6 @@ LvL1foreground = pygame.image.load(
     'graphics/foregrounds/untitled.png').convert_alpha()
 #Lvl1Background_scaled = pygame.transform.scale(LvL1background, (1725, 1024))
 
-# enemy
-snail = pygame.image.load('graphics/snail/snail1.png').convert_alpha()
-snail_rect = snail.get_rect(center=(520, 80))
-
-
 # intro screen
 game_name = test_font.render('Mathgame', False, (111, 196, 169))
 game_name_rect = game_name.get_rect(center=(400, 80))
@@ -51,7 +46,9 @@ while True:
         screen.blit(LvL1background, (0, 0))
         screen.blit(level.snail, level.snail_rect)
         level.run()
+        if level.game_active == False:
+            game_active = False
         screen.blit(LvL1foreground, (0, 4))
 
-    pygame.display.update()
-    clock.tick(60)
+        pygame.display.update()
+        clock.tick(60)
